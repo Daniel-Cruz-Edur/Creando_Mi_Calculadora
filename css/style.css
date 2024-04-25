@@ -1,0 +1,131 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body
+{
+    background-color: black;
+}
+
+.contenedor_Calculadora
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color: rgb(223, 220, 220);
+    text-align: center;
+    padding: 2%;
+    color: #fff;
+    border-radius: 10%;
+}
+
+.operaciones_Contenedor
+{
+    background-color: gray;
+    padding: 5%;
+    margin: 2%;
+    width: 85%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+
+.number
+{
+    display: inline-block;
+    background-color: gray;
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 70%;
+    cursor: pointer;
+    height: 65px;
+    width: 65px;
+    align-items: center;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.simbol
+{
+    display: inline-block;
+    background-color: rgb(255, 186, 39);
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 70%;
+    cursor: pointer;
+    height: 65px;
+    width: 65px;
+    align-items: center;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.simbol-decimal
+{
+    background-color: rgba(40, 169, 179, 0.801);
+}
+
+.simbol-other
+{
+    background-color: rgba(226, 133, 255, 0.801);
+}
+
+.simbol-Del
+{
+    background-color: rgba(255, 48, 127, 0.801);
+}
+
+.simbol-igual
+{
+    background-color: rgba(6, 145, 52, 0.801);
+}
+
+.Borrar
+{
+    background-color: rgb(197, 197, 197);
+    margin: 2%;
+    width: 90%;
+    padding: 2%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.simbol:hover
+{
+    background-color: rgba(187, 255, 0, 0.432);
+}
+
+.simbol-other:hover
+{
+    background-color: rgba(187, 255, 0, 0.432);
+
+}
+
+.simbol-decimal:hover
+{
+    background-color: rgba(187, 255, 0, 0.432);
+}
+
+.number:hover
+{
+    background-color: rgba(187, 255, 0, 0.432);
+}
+
+li
+{
+    margin: 5px;
+}
