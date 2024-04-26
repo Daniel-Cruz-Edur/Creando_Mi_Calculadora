@@ -51,7 +51,6 @@ var fun = {
                         PO.operaciones.innerHTML += digito;
                     }
                 }
-                guardarultimodigito();
                 console.log('Presionaste un número. ');
             break
             case "simbol":
@@ -69,7 +68,6 @@ var fun = {
                         PO.resultado = false;
                     }
                 }
-                guardarultimodigito();
                 console.log('Simbol');
             break;
             case "simbol simbol-decimal":
@@ -80,7 +78,6 @@ var fun = {
                     PO.resultado = false;
                 }
                 console.log('decimal');
-                guardarultimodigito();
             break;
             case "simbol simbol-igual":
                 PO.operaciones.innerHTML = eval(PO.operaciones.innerHTML);
@@ -88,8 +85,39 @@ var fun = {
                 console.log('igual');
             break;
             case "simbol simbol-Del":
-                PO.operaciones.innerHTML = PO.operaciones.borrarultimodigito;
+                let currentValue = PO.operaciones.innerHTML;
+                if (currentValue.length > 1) 
+                {
+                PO.operaciones.innerHTML = currentValue.slice(0, -1);
+                } 
+                else 
+                {
+                PO.operaciones.innerHTML = "0";
+                }
                 console.log("Del");
+            break;
+            case "simbol simbol-other pi":
+                let PI = Math.PI;
+                if(PO.cantisig == 1)
+                {
+                    PO.operaciones.innerHTML += PI;
+                }
+                else
+                {
+                    console.log('Oh it was. ')
+                }
+                console.log("PI was pressed. ");
+            break;
+            case "simbol simbol-other cubo":
+                let expression = PO.operaciones.innerHTML;
+                let Current_Values = eval(expression);
+                if (!isNaN(Current_Values)) {
+                    PO.operaciones.innerHTML = Math.pow(Current_Values, 3);
+                    PO.resultado = true;
+                } else {
+                    console.log("Invalid input for cube operation");
+                }
+                console.log("Cube was pressed.");
             break;
         }
     },
@@ -97,17 +125,8 @@ var fun = {
     {
         PO.resultado = false;
         PO.operaciones.innerHTML = 0;
-    },
-    guardarultimodigito: function(digito)
-    {
-        Lista_Pantalla.append(digito);
-        console.log(Lista_Pantalla)
-    },
-    borrarultimodigito: function()
-    {
-        Lista_Pantalla.pop();
-        console.log(Lista_Pantalla)
     }
+
 }
 
 fun.inicio();
