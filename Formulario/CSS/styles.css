@@ -1,0 +1,59 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.fieldset
+{
+    background-color: azure;
+    border: 6px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 12px 14px black;
+    margin: 10px;
+    padding: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form
+{
+    background-color: aliceblue;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10PX;
+}
+
+.form label
+{
+    display: block;
+    margin: 10px;
+}
+
+.input-hover:hover
+{
+    border-radius: 5px;
+    background-color: rgb(195, 143, 243)
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]
+{
+    border-radius: 4px;
+    width: fit-content;
+    padding: 2px;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover
+{
+    border: 3px solid black;
+    color: blueviolet;
+    box-shadow: 4px 5px 6px black;
+}
